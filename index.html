@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Moon Project</title>
+	<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	 <div class="moving-clouds"></div>
+	 <div class="moon-phase-display">
+        <img src="./images/8.png" alt="Moon Phase" id="moon-image">
+        <p id="moon-phase-name"></p>
+        <h1 id="selected-date"></h1>
+    </div>
+
+    <div class="create-Calendar">
+    <header>
+    <h2 id="Current-Month"></h2>
+    <div>
+     <button class="left" onclick="prevMonth()">
+                   <i class="fa fa-caret-left"></i>
+                </button>
+                <button  class="right" onclick="nextMonth()">
+                    <i class="fa fa-caret-right"></i>
+                </button>
+
+    </div>
+    </header>
+    <div id="Calendar-grid">
+      
+    </div>
+    </div>
+<script type="text/javascript" src="./JS/Moon.js"></script>
+</body>
+</html>

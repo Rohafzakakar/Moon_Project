@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: revert-layer;
+	background-color: black;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+	background-image: url('./../images/rrr.jpg');
+	background-size: cover;
+	overflow-x: hidden;
+}
+
+
+.moon-phase-display{
+	text-align: center;
+	margin-top: 20px;
+}
+
+#moon-phase-name{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#selected-date{
+	font-weight: bold;
+	margin-top: 10px;
+}
+.create-Calendar{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+	z-index: 9999;
+
+}
+header{
+	background-color: #6A5A8A;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	margin-bottom: 3px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header:hover{
+	background-color: white;
+	color: black;
+}
+
+header .left{
+	background-color:#7879;
+	width: 30px;
+	height: 30px;
+	border-radius: 20%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+header .left .fa{
+    color: #fff;
+    font-size: 16px;
+}
+
+
+header .right{
+	background-color: #7879;
+	width: 30px;
+	height: 30px;
+	border-radius: 20%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+}
+
+
+header .right .fa{
+    color: #fff;
+    font-size: 16px;
+}
+
+#Calendar-grid{
+	display: grid;
+	grid-template-columns: repeat(7, 50px);
+	gap: 3px;
+}
+
+
+#Calendar-grid div{
+	width: 50px;
+	height: 50px;
+	background-color: #8A7D9B;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+#Calendar-grid div:hover{
+    background-color: black
+}
+.selected{
+	background-color: black !important;
+	color: white;
+
+
+}
+
+.moving-clouds{
+	background: url('./../images/clouds.png');
+    position: absolute;
+    top: 10px;
+    width: 250em;
+    height: 80em;
+    animation: cloudLoop 50s linear infinite;
+    overflow-x: hidden;
+}
+
+#moon-image {
+    transition: all 3s;
+}
+
+@keyframes cloudLoop {
+    0% {
+        transform: translate3D(0, 0 , 0);
+    }
+    100% {
+        transform: translate3D(-50%, 0 , 0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #calendar-grid{
+        grid-template-columns: repeat(7 , 40px);
+    }
+    
+    #calendar-grid div{
+        width: 40px;
+        height: 40px;
+    }
+}
